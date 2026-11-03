@@ -30,6 +30,25 @@ app.use(express.json());
 // Static Folder للملفات المرفوعة
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
+// ==========================================
+// 🌐 مسارات الواجهات الأمامية (HTML Routes)
+// ==========================================
+
+// صفحة نظام الحضور والـ QR Code
+app.get('/qrcode', (req, res) => {
+  res.sendFile(path.join(process.cwd(), 'public', 'qrcode.html'));
+});
+
+// صفحة لوحة ولي الأمر
+app.get('/parent', (req, res) => {
+  res.sendFile(path.join(process.cwd(), 'public', 'parent.html'));
+});
+
+// صفحة مركز رفع الملفات
+app.get('/upload', (req, res) => {
+  res.sendFile(path.join(process.cwd(), 'public', 'upload.html'));
+});
+
 // جعل مجلد public متاحاً للعامة لعرض الواجهات
 app.use(express.static(path.join(process.cwd(), 'public')));
 

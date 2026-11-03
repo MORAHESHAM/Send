@@ -53,8 +53,14 @@ app.get('/', async (req, res) => {
   }
 });
 
-// تشغيل السيرفر
+// تشغيل السيرفر محلياً أو تصديره لـ Vercel
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running smoothly on http://localhost:${PORT} 🚀`);
-});
+
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Server is running smoothly on http://localhost:${PORT} 🚀`);
+  });
+}
+
+// تصدير الـ app ليعمل بسلاسة على Vercel Serverless
+export default app;

@@ -30,6 +30,9 @@ app.use(express.json());
 // Static Folder للملفات المرفوعة
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
+// جعل مجلد public متاحاً للعامة لعرض الواجهات
+app.use(express.static(path.join(process.cwd(), 'public')));
+
 // ربط كافة المسارات (Routes) بعد تعريف app مباشرة
 app.use('/api/users', userRoutes);
 app.use('/api/ai', aiRoutes);

@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>SEND System API</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px; background: #0f172a; color: #fff; }
-    h1 { color: #38bdf8; }
-    .status { background: #1e293b; padding: 20px; display: inline-block; border-radius: 8px; margin-top: 20px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظومة SEND التعليمية الذكية</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>نظام SEND التعليمي - Backend API</h1>
-  <div class="status">
-    <p>السيرفر شغال بنجاح على Vercel 🚀</p>
-    <p><small>جميع مسارات الـ API جاهزة للاستقبال (/api/...)</small></p>
-  </div>
+    <div class="container">
+        <header>
+            <h1>نظام SEND التعليمي الذكي 🎓</h1>
+            <p>منصة متكاملة لإدارة المحاضرات، الحضور، التقارير، وأهداف الطلاب بالذكاء الاصطناعي.</p>
+        </header>
+
+        <main class="grid-cards">
+            <div class="card">
+                <h3>👥 لوحة المستخدمين</h3>
+                <p>إدارة بيانات الطلاب والأساتذة وصلاحيات الدخول.</p>
+                <a href="/api/users" target="_blank" class="btn">عرض الـ API</a>
+            </div>
+
+            <div class="card">
+                <h3>📱 لوحة ولي الأمر</h3>
+                <p>متابعة تقارير الطلاب وحالة الحضور والدرجات أول بأول.</p>
+                <a href="parent.html" class="btn">دخول لوحة ولي الأمر</a>
+            </div>
+
+            <div class="card">
+                <h3>📷 نظام الحضور والـ QR Code</h3>
+                <p>تسجيل الحضور الفوري للمحاضرات عبر الرموز الشريطية.</p>
+                <a href="qrcode.html" class="btn">فتح نظام الحضور</a>
+            </div>
+
+            <div class="card">
+                <h3>📁 مركز رفع الملفات</h3>
+                <p>رفع وتنزيل المحاضرات والملفات الدراسية بسلاسة.</p>
+                <a href="upload.html" class="btn">إدارة الملفات</a>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

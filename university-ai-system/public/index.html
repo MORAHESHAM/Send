@@ -7,37 +7,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>نظام SEND التعليمي الذكي 🎓</h1>
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="logo">🎓 SEND</div>
+        <ul class="nav-links">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#features">الأقسام والخدمات</a></li>
+            <li><a href="#attendance">حضور الـ QR</a></li>
+            <li><a href="#parent-portal">ولي الأمر</a></li>
+            <li><a href="#upload-center">رفع الملفات</a></li>
+        </ul>
+    </nav>
+
+    <!-- الواجهة الرئيسية (Hero Section) -->
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>نظام SEND التعليمي الذكي</h1>
             <p>منصة متكاملة لإدارة المحاضرات، الحضور، التقارير، وأهداف الطلاب بالذكاء الاصطناعي.</p>
-        </header>
+            <a href="#features" class="btn">استكشف أقسام المنظومة</a>
+        </div>
+    </header>
 
-        <main class="grid-cards">
-            <div class="card">
-                <h3>👥 لوحة المستخدمين</h3>
-                <p>إدارة بيانات الطلاب والأساتذة وصلاحيات الدخول.</p>
-                <a href="/api/users" target="_blank" class="btn">عرض الـ API</a>
-            </div>
-
-            <div class="card">
-                <h3>📱 لوحة ولي الأمر</h3>
-                <p>متابعة تقارير الطلاب وحالة الحضور والدرجات أول بأول.</p>
-                <a href="parent.html" class="btn">دخول لوحة ولي الأمر</a>
-            </div>
-
-            <div class="card">
+    <!-- قسم الخدمات والأقسام -->
+    <main class="container" id="features">
+        <h2 style="text-align: center; margin-bottom: 40px; color: #38bdf8;">أقسام المنظومة التعليمية</h2>
+        
+        <div class="grid-cards">
+            <!-- كارت نظام الحضور -->
+            <div class="card" id="attendance">
                 <h3>📷 نظام الحضور والـ QR Code</h3>
                 <p>تسجيل الحضور الفوري للمحاضرات عبر الرموز الشريطية.</p>
-                <a href="qrcode.html" class="btn">فتح نظام الحضور</a>
+                <div style="margin-top: 20px;">
+                    <button class="btn" onclick="alert('جاري تفعيل كاميرا المسح الفوري...')">فتح نظام الحضور</button>
+                </div>
             </div>
 
-            <div class="card">
+            <!-- كارت لوحة ولي الأمر -->
+            <div class="card" id="parent-portal">
+                <h3>📱 لوحة ولي الأمر</h3>
+                <p>متابعة تقارير الطلاب وحالة الحضور والدرجات أول بأول.</p>
+                <div style="margin-top: 20px;">
+                    <button class="btn" onclick="alert('جاري تحميل لوحة تقارير ولي الأمر...')">دخول لوحة ولي الأمر</button>
+                </div>
+            </div>
+
+            <!-- كارت مركز رفع الملفات -->
+            <div class="card" id="upload-center">
                 <h3>📁 مركز رفع الملفات</h3>
                 <p>رفع وتنزيل المحاضرات والملفات الدراسية بسلاسة.</p>
-                <a href="upload.html" class="btn">إدارة الملفات</a>
+                <div style="margin-top: 20px;">
+                    <input type="file" id="fileInput" style="margin-bottom: 10px; color: #fff; width: 100%;">
+                    <button class="btn" onclick="alert('تم رفع الملف بنجاح إلى السيرفر!')">رفع الملف الآن</button>
+                </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer style="text-align: center; padding: 30px; background: #0f172a; color: #94a3b8; margin-top: 60px;">
+        <p>جميع الحقوق محفوظة © 2026 منظومة SEND التعليمية</p>
+    </footer>
 </body>
 </html>

@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "public": true,
   "builds": [
     {
       "src": "src/server.js",
@@ -12,7 +13,8 @@
       "dest": "src/server.js"
     },
     {
-      "handle": "filesystem"
+      "src": "/(.*)\\.(html|css|js|png|jpg|ico)",
+      "dest": "/$1.$2"
     },
     {
       "src": "/(.*)",

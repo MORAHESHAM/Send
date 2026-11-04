@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "public": true,
   "builds": [
     {
       "src": "src/server.js",
@@ -8,14 +7,6 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "src/server.js"
-    },
-    {
-      "src": "/(.*)\\.(html|css|js|png|jpg|ico)",
-      "dest": "/$1.$2"
-    },
     {
       "src": "/(.*)",
       "dest": "src/server.js"
